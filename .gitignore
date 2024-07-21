@@ -1,0 +1,13 @@
+secondary.py
+esp_rfc2217_server.exe
+ESP32_GENERIC-SPIRAM-20231005-v1.21.0.bin
+ESP8266_GENERIC-20231005-v1.21.0.bin
+ESP8266_GENERIC-FLASH_1M-20231005-v1.21.0.bin
+ESP8266_GENERIC-FLASH_512K-20231005-v1.21.0.bin
+espefuse.exe
+espsecure.exe
+esptool.exe
+__pycache__/CustomInputWidget.cpython-311.pyc
+esphacking/bootloader.bin
+esphacking/esp32-wifi-penetration-tool.bin
+esphacking/partition-table.bin

@@ -161,6 +161,8 @@ class FlashToolApp(QWidget):
         # Terminal window
         self.terminal_window = QPlainTextEdit()
         self.terminal_window.setReadOnly(True)
+        self.terminal_window_cursor = self.terminal_window.textCursor()
+
 
         # Set up a QProcess for handling subprocesses
         self.subprocess = QProcess(self)
@@ -427,7 +429,8 @@ class FlashToolApp(QWidget):
     def update_terminal(self):
         # Read available data from the subprocess
         output = self.subprocess.readAllStandardOutput().data().decode()
-        self.terminal_window.appendPlainText(output)
+        self.terminal_window_cursor.movePosition(self.terminal_window_cursor.MoveOperation.End, self.terminal_window_cursor.MoveMode.MoveAnchor,1)
+        self.terminal_window.insertPlainText(output)
         self.terminal_window.verticalScrollBar().setValue(self.terminal_window.verticalScrollBar().maximum())
 
     def update_ui(self):
